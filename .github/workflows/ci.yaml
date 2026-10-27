@@ -18,6 +18,7 @@ jobs:
                 pip install pytest
                 python3 -m pytest
     build:
+        needs: test
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
