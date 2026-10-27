@@ -1,0 +1,24 @@
+# Virtual env and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Git and CI
+.git/
+.github/
+.gitignore
+
+# Local data: never bake your dev database into the image
+shortener.db
+*.db
+
+# Tests and dev-only files
+tests/
+requirements-dev.txt
+pytest.ini
+
+# Docs and Docker files themselves
+README.md
+Dockerfile
+.dockerignore

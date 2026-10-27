@@ -1,6 +1,6 @@
 import secrets
 import sqlite3
-import string
+import string, os
 from datetime import datetime, timezone
 from urllib.parse import urlparse
 
@@ -95,7 +95,7 @@ def create_app(db_path=None):
     return app
 
 
-app = create_app()
+app = create_app(os.environ.get("DB_PATH"))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
