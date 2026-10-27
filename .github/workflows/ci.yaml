@@ -1,9 +1,11 @@
 name: day-2scenario
 on:
     push:
-        branches: ['feature']
+        branches: ['feature','main']
     pull_request:
         branches: ['main']
+permissions:
+    contents: read
 jobs:
     test:
         runs-on: ubuntu-latest
