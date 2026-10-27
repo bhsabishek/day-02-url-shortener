@@ -24,5 +24,5 @@ jobs:
                 docker build -t url-shortner:v1 .
                 docker run -d --name shortner -p 5000:5000 \
                 -v shortner-data:/data -e DB_PATH=/data/shortner.db \
-                url-shortner
+                url-shortner:v1
                 curl localhost:5000\health
